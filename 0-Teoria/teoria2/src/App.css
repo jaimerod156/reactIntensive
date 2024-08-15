@@ -1,0 +1,21 @@
+body{
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+h1{
+    font-size: 40px;
+}
+a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+}
+
+div{
+    text-align: center;
+}
