@@ -3,6 +3,9 @@ import { get } from "../data/httpClient";
 import { useParams } from "react-router-dom";
 import { getMovieImg } from "../utils/getMovieImg";
 
+import '../index.css';
+import "./MovieDetails.css";
+
 export function MovieDetails(){
   const { movieId } = useParams();
   const [movie, setMovie] = useState([]);
@@ -18,10 +21,10 @@ export function MovieDetails(){
     
     
   return (
-    <div>
-        <img src={imageUrl} alt={movie.title}/>
-        <div>
-          <p><strong>Título: </strong>{movie.title}</p>
+    <div className="detailContainer">
+        <img className="col movieImage" src={imageUrl} alt={movie.title}/>
+        <div className="col movieDetails">
+          <p className="title"><strong>Título: </strong>{movie.title}</p>
           <p><strong>Genero: </strong>{generos.name}</p>
           <p><strong>Descripción: </strong>{movie.overview}</p>
         </div>
