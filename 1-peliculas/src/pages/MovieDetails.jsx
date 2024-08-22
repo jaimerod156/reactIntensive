@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { get } from "../data/httpClient";
 import { useParams } from "react-router-dom";
 import { getMovieImg } from "../utils/getMovieImg";
+import { Link } from "react-router-dom";
 
 import '../index.css';
 import "./MovieDetails.css";
@@ -17,8 +18,8 @@ export function MovieDetails(){
       
     });
   }, [movieId]);
+  
     const imageUrl = getMovieImg(movie.poster_path,500);
-    
     
   return (
     <div className="detailContainer">
@@ -27,7 +28,12 @@ export function MovieDetails(){
           <p className="title"><strong>Título: </strong>{movie.title}</p>
           <p><strong>Genero: </strong>{generos.name}</p>
           <p><strong>Descripción: </strong>{movie.overview}</p>
+          <div className="btn">
+          <Link to={"/"}>Volver a inicio
+          </Link>
+          </div>
         </div>
+
     </div>
     
   );
