@@ -48,7 +48,7 @@ export function Login(){
 
             <div className={styles.footer}>
               <b className={styles.error}>{errorMsg}</b>
-              <button onClick={Loguearse}>Login</button>
+              <button onClick={Loguearse} disabled={submitButtonDisabled}>Login</button>
               <p>Crear cuenta 
                 <span> <Link to={"/signup"}>Registrarse
                 </Link></span>

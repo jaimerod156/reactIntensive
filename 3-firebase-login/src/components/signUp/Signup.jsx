@@ -60,9 +60,8 @@ export function Signup(){
           ...prev, pass:event.target.value
         }))
       }/>
-    </div>
 
-      <div className={styles.footer}>
+<div className={styles.footer}>
         <b className={styles.error}>{errorMsg}</b>
         <button onClick={registro} disabled={submitButtonDisabled}>Guardar</button>
         <p>Si ya tienes una cuenta inicia sesión 
@@ -72,6 +71,9 @@ export function Signup(){
         </p>
 
       </div>
+    </div>
+
+
   </div>
   );
 };
