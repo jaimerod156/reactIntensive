@@ -69,11 +69,8 @@ export function Signup(){
         <Link to={"/login"}> Login</Link>
         </span>
         </p>
-
       </div>
     </div>
-
-
   </div>
   );
 };

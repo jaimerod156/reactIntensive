@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
+import "../../App.css";
 
 function salir(){
   return auth.signOut();
@@ -8,7 +9,7 @@ function salir(){
 
 export function Home(props){
   return (
-    <div>
+    <div className="contenedor">
       <div>
         <div>
           <h1><Link to={"/login"}>Ir al login</Link></h1>
