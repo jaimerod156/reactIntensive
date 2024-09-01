@@ -36,6 +36,13 @@ function App() {
   const handleDelete = async (id) =>{
     await deleteDoc(doc(db,"todos",id))
   }
+
+  const toggleComplete = async (todo) =>{
+    await updateDoc(doc(db,"todos", todo.id),{
+      completed: !todo.completed
+    } )
+  }
+
   return (
     <div className='App'>
       <div>
@@ -47,7 +54,9 @@ function App() {
       <div className='todo_container'>
         {todos.map((todo)=>(
           <Todo todo={todo}
-          handleDelete={handleDelete}/>
+          handleDelete={handleDelete}
+          toggleComplete ={toggleComplete}
+          handleEdit={handleEdit}/>
         ))}
       </div>
     </div>
