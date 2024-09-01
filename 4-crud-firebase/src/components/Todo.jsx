@@ -15,12 +15,12 @@ export function Todo({todo, handleDelete,handleEdit, toggleComplete}){
 
   return (
     <div className="todo">
-      <input style={{textDecoration:todo.completed? "line-through":"none"}}
+      <input className="list" style={{textDecoration:todo.completed? "line-through":"none"}}
        value={todo.title===""?newTitle:todo.title} onChange={handleChange} />
        <div>
           <button className="btn-complete" onClick={ ()=>toggleComplete(todo) }>Marcar</button>
           <button className="btn-edit" onClick={ ()=>handleEdit(todo, newTitle) }>Editar</button>
-          <button onClick={ ()=>handleDelete(todo.id) }>eliminar</button>
+          <button className="btn-delete" onClick={ ()=>handleDelete(todo.id) }>eliminar</button>
        </div>
     </div>
   );

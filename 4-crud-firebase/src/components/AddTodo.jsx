@@ -19,7 +19,7 @@ export function AddTodo(){
     <div>
       <form onSubmit={Insertar}>
         <div className="input_container">
-          <input type="text" placeholder="Ingresar tarea..." value={title} onChange={(e)=> setTitle(e.target.value)} />
+          <input className="txtTodo" type="text" placeholder="Ingresar tarea..." value={title} onChange={(e)=> setTitle(e.target.value)} />
         </div>
         <div className="btn_container">
           <button>Insertar</button>
